@@ -5,12 +5,80 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registration Form</title>
-    <link rel="stylesheet" href="web.css" />
-    
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        contain-sizing: border-contain;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      body {
+        background-color:#FFC4C4;
+      }
+      .head {
+        margin-top: 1rem;
+        /* color: white; */
+      }
+      .contain {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 3rem;
+      }
+      .form {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background-color: white;
+        width: 600px;
+        height: 500px;
+        contain-shadow: 2px 4px 10px gray;
+        border: 1px solid black;
+        border-radius: 20px;
+        padding: 20px;
+      }
+      .input {
+        padding: 10px 15px;
+        border: 2px solid black;
+        font-size: 18px;
+        outline: none;
+        border-radius: 10px;
+        background-color: black;
+      }
+      label {
+        font-size: 18px;
+        letter-spacing: 1.4px;
+      }
+      .tableForm {
+        margin-top: 10px;
+      }
+      
+
+      input:invalid:focus {
+        border: 2px solid red;
+      }
+
+      .table {
+        border: 2px solid black;
+        margin: 40px auto;
+      }
+
+      .td,
+      .th {
+        padding: 10px;
+        text-align: center;
+      }
+
+      .subHead {
+        text-align: center;
+        margin-top: 2rem;
+      }
+    </style>
   </head>
   <body>
     <h1 align="center" class="head">WD101 - Level 8</h1>
-    <div class="box">
+    <div class="contain">
       <form class="form" id="form">
         <h2 align="center">Registration Form</h2>
 
@@ -55,7 +123,7 @@
             </td>
           </tr>
           <tr>
-            <td><label for="dob">D.O.B : </label></td>
+            <td><label for="dob">Date Of Birth :</label></td>
             <td>
               <input
                 style="width: 220px"
@@ -70,7 +138,7 @@
           <tr>
             <td colspan="2">
               <input type="checkbox" name="agree" id="agree" />
-              <label for="checkbox">Accept T&C</label>
+              <label for="checkbox">Accespt Terms & Conditions</label>
             </td>
           </tr>
           <tr>
@@ -86,9 +154,9 @@
       <h2 class="subHead">Entries</h2>
       <div id="tableDiv"></div>
     </div>
-    <script>
+    <script >
         let form = document.getElementById("form");
-
+console.log("js fil,e")
 // localStorage.clear();
 // let Entries = [];
 
@@ -212,5 +280,6 @@ function validate(ele) {
   }
 }
     </script>
+
   </body>
 </html>
